@@ -13,3 +13,32 @@
     justify-content: space-between;
   }
 }
+
+@media screen and (max-width: 855px) {
+  .collection-preview {
+    // justify-content: center;
+    // align-items: center;
+
+    .preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      // justify-content: center;
+      align-content: space-between;
+      padding-left: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .collection-preview {
+    // justify-content: center;
+    // align-items: center;
+
+    .preview {
+      display: grid;
+      grid-template-columns: 1fr;
+      // justify-content: center;
+      align-content: space-between;
+      padding-left: 2rem;
+    }
+  }
+}

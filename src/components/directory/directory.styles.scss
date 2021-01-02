@@ -4,3 +4,16 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 885px) {
+  .directory-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 695px) {
+  .directory-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+} ;
