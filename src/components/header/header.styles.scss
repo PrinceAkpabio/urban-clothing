@@ -9,6 +9,7 @@
     height: 100%;
     width: 70px;
     padding: 25px;
+    z-index: 40;
   }
 
   .options {
@@ -22,5 +23,94 @@
       padding: 10px 15px;
       cursor: pointer;
     }
+  }
+  .Nav-mb-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 855px) {
+  .header {
+    // position: relative;
+    height: 3rem;
+    margin-bottom: 4rem;
+
+    // #Nav-logo {
+    //   width: 37%;
+    //   margin-top: 1rem;
+    // }
+    .options {
+      position: absolute;
+      display: grid;
+      align-content: center;
+      justify-content: center;
+      z-index: 10;
+      top: 0;
+      margin: 0;
+      left: -100vw;
+      width: 45%;
+      height: calc(100vh);
+      background-color: #b6c5c5;
+      transition: all 1s ease-in-out;
+      &.active {
+        left: 0;
+        top: 0;
+        z-index: 10;
+        transition: all 1s ease-in-out;
+      }
+      // .Nav-menu {
+      //   display: grid;
+      //   justify-items: center;
+
+      & > .option {
+        width: 100%;
+        // padding: 1.5rem 0;
+        // margin: 0.5rem 0;
+        transform: translateX(-100vw);
+        transition: all 0.5s ease-in-out;
+        font-size: 1.1rem;
+        color: #f0f0f0;
+
+        &:nth-child(2) {
+          margin: 5rem 0;
+        }
+        &.active {
+          transform: translateX(0vw);
+        }
+        // .menu-links {
+        //   font-size: 1.1rem;
+        // }
+      }
+      // }
+
+      & > .cart-icon {
+        display: none;
+      }
+    }
+    .Nav-mb-menu {
+      display: flex;
+      padding-right: 2rem;
+      margin-top: 1rem;
+      justify-content: space-between;
+
+      transition: all 1s ease-in-out;
+
+      ion-icon {
+        font-size: 2.1rem;
+        color: #101a1a;
+        margin: 0.5rem 0 0 0.5rem;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          color: #808282;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 to 3 {
+  .options > .option:nth-child(#{$i}) {
+    transition-delay: ($i * 0.2s) + 0.15s;
   }
 }
