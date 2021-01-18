@@ -57,7 +57,7 @@ const Header = ({ currentUser, hidden }) => {
         <Logo className="logo" />
       </Link>
 
-      <div ref={navRef} className={`options ${menu && "active"}`}>
+      <div className={`options ${menu && "active"}`}>
         <Link className={`option ${menu && "active"}`} to="/shop">
           SHOP
         </Link>
@@ -80,7 +80,7 @@ const Header = ({ currentUser, hidden }) => {
         <CartIcon />
       </div>
       {hidden ? null : <CartDropDown />}
-      <MenuButton menu={menu} ToggleMenu={ToggleMenu} />
+      <MenuButton navRef={navRef} menu={menu} ToggleMenu={ToggleMenu} />
     </div>
   );
 };
